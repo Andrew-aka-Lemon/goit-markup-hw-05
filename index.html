@@ -97,7 +97,11 @@
           <h1 class="hero-title">
             Эффективные решения для вашего бизнеса
           </h1>
-          <button type="button" class="hero-btn">
+          <button
+            type="button"
+            class="hero-btn"
+            data-modal-open
+          >
             Заказать услугу
           </button>
         </div>
@@ -207,21 +211,30 @@
                 src="./images/studio/box1.jpg"
                 alt="Работа за ноутом"
                 width="370"
-              /><p class="whatdowedo-overlay">Десктопные приложения</p>
+              />
+              <p class="whatdowedo-overlay">
+                Десктопные приложения
+              </p>
             </li>
             <li class="whatdowedo-item">
               <img
                 src="./images/studio/box2.jpg"
                 alt="Работа со смартфоном"
                 width="370"
-              /><p class="whatdowedo-overlay">Мобильные приложения</p>
+              />
+              <p class="whatdowedo-overlay">
+                Мобильные приложения
+              </p>
             </li>
             <li class="whatdowedo-item">
               <img
                 src="./images/studio/box3.jpg"
                 alt="Работа с планшетом"
                 width="370"
-              /><div class="whatdowedo-overlay">Дизайнерские решения</div>
+              />
+              <div class="whatdowedo-overlay">
+                Дизайнерские решения
+              </div>
             </li>
           </ul>
         </div>
@@ -693,5 +706,24 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop" data-modal>
+      <div class="modal-window">
+        <button type="button" class="close-modal-btn" data-modal-close>
+          <img
+            src="./images/icon/close-ico.png"
+            alt=""  
+          />
+        </button>
+        <h3>Тут модальне вікно</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Quo adipisci quos nemo, facere
+          qui consequatur aut dolore est reiciendis
+          repellat.
+        </p>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
