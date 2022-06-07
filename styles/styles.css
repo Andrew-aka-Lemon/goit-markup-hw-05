@@ -265,9 +265,14 @@ p {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid #000000;
 
-  transition-property: opacity, visibility;
-  transition-duration: 1250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, opacity, visibility;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(
+    0,
+    0.99,
+    1,
+    0.99
+  );
 }
 
 .modal-window {
@@ -319,6 +324,7 @@ p {
 .is-hidden {
   opacity: 0;
   visibility: hidden;
+  transform: translateY(-100%);
   pointer-events: none;
 }
 
