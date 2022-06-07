@@ -264,6 +264,10 @@ p {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid #000000;
+
+  transition-property: opacity, visibility;
+  transition-duration: 1250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window {
@@ -292,15 +296,30 @@ p {
   padding: 0;
   border: none;
 
-background-color: transparent;
+  background-color: transparent;
 
   position: absolute;
   top: 8px;
   right: 8px;
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-btn img {
   display: block;
+}
+
+.close-modal-btn:hover {
+  transform: translate(-2%, -2%);
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* ========================/// STUDIO ///====================== */
