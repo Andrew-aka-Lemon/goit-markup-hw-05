@@ -260,12 +260,15 @@ p {
   top: 0;
   left: 0;
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid #000000;
 
-  transition-property: transform, opacity, visibility;
+  opacity: 1;
+  visibility: visible;
+
+  transition-property: opacity, visibility;
   transition-duration: 1000ms;
   transition-timing-function: cubic-bezier(
     0,
@@ -275,11 +278,25 @@ p {
   );
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -150%);
+  opacity: 0;
+  visibility: hidden;
+}
+
 .modal-window {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: visible;
 
   padding: 40px 20px;
 
@@ -290,6 +307,15 @@ p {
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition-property: transform, opacity, visibility;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(
+    0,
+    0.99,
+    1,
+    0.99
+  );
 }
 
 .modal-window > h3 {
@@ -319,13 +345,6 @@ p {
 .close-modal-btn:hover {
   transform: translate(-2%, -2%);
   cursor: pointer;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
-  pointer-events: none;
 }
 
 /* ========================/// STUDIO ///====================== */
