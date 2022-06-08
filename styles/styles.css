@@ -323,17 +323,22 @@ p {
 }
 
 .close-modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin: 0;
   padding: 0;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 
-  background-color: transparent;
+  background-color: #fff;
 
   position: absolute;
   top: 8px;
   right: 8px;
 
-  transition-property: transform;
+  transition-property: transform, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -342,9 +347,14 @@ p {
   display: block;
 }
 
+.icon-close-cross {
+  fill: currentColor;
+}
+
 .close-modal-btn:hover {
   transform: translate(-2%, -2%);
   cursor: pointer;
+  color: var(--btn-color-focus);
 }
 
 /* ========================/// STUDIO ///====================== */
